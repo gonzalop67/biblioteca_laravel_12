@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ValidacionMenu;
 use App\Models\Admin\Menu;
 use Illuminate\Http\Request;
 
@@ -27,9 +28,10 @@ class MenuController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function guardar(Request $request)
+    public function guardar(ValidacionMenu $request)
     {
-        Menu::create($request->all());
+        Menu::create($request->validated());
+        return redirect()->route('menu.crear')->with('mensaje', 'Menú creado con éxito.');
     }
 
     /**
