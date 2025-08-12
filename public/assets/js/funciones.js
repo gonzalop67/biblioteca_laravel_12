@@ -37,7 +37,7 @@ var APP = function () {
                 }
             });
         },
-        notificacion: function (mensaje, titulo, tipo) {
+        notificaciones: function (mensaje, titulo, tipo) {
             switch (tipo) {
                 case 'error':
                     toastr.error(mensaje, titulo);

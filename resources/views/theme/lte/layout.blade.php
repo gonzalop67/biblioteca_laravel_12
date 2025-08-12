@@ -21,6 +21,8 @@
        folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('assets/' . $theme . '/dist/css/skins/_all-skins.min.css') }}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     @yield('styles')
 
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
@@ -70,6 +72,9 @@
     @yield('scriptsPlugins')
     <script src="{{ asset('assets/js/jquery-validation/dist/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-validation/dist/localization/messages_es.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
     <script src="{{ asset('assets/js/funciones.js') }}"></script>
     @yield('scripts')
 </body>
