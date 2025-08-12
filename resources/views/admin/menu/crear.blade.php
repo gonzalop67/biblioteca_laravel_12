@@ -25,3 +25,7 @@
         </div>
     </div>
 @endsection
+
+@section('scripts')
+    <script src="{{ asset('assets/pages/scripts/admin/crear.js') }}"></script>
+@endsection
