@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\MenuController;
+use App\Http\Controllers\Admin\MenuRolController;
 use App\Http\Controllers\Admin\PermisoController;
 use App\Http\Controllers\Admin\RolController;
 use App\Http\Controllers\InicioController;
@@ -25,4 +26,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('rol', [RolController::class, 'guardar'])->name('rol.guardar');
     Route::put('rol/{id}', [RolController::class, 'actualizar'])->name('rol.actualizar');
     Route::delete('rol/{id}/eliminar', [RolController::class, 'eliminar'])->name('rol.eliminar');
+
+    /* RUTAS MENU_ROL */
+    Route::get('menu-rol', [MenuRolController::class, 'index'])->name('menu_rol');
+    Route::post('menu-rol', [MenuRolController::class, 'guardar'])->name('menu_rol.guardar');
 });
